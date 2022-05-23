@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<style type="text/css">
+  body {background: ;}
+  *{margin: 0; padding: 0; box-sizing: border-box;}
+  header {width: 100%; height: 100vh;}
+  nav {width: 100%; height: 100vh; background:#ff87cb; box-shadow: 0 0  20px #ff87cb; z-index: 10;}
+  div {width: 100%; height: 50vh; background:rgb(255,178,221,0.9); box-shadow: 0 0 20px #ffb2dd; position: absolute; bottom: 0; z-index: 5;}
+  section {display: flex; align-items: center; justify-content: center; min-height: 100vh; position: absolute; width: 100%;}
+  main {  position: relative;  display: flex; align-items: center; justify-content: space-between; border-radius: 10px; }
+  main li {position: relative; list-style-type: none; width: 80px; height: 80px; background:#ffb2dd; box-shadow: 0 0 20px #ffb2dd;  margin-left:10px; margin-right:10px; cursor: pointer; display: flex; align-items: center; justify-content: center;  border-radius: 10px; border:2px solid white;}
+  main li.active {animation: kara 2s; z-index: 1000; }
+
+  @keyframes kara {
+    0%{
+       top: -50px;
+    }
+    100%{
+      top: 0px;
+    }
+  }
+  
+  main li label  i { font-size: 43px; color: white; text-shadow: 0 0 2px white; } 
+  
+
+
+  @media only screen and (max-width:600px) {
+   
+    main li {width: 70px; height: 70px;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <section>
+      <main>
+          <li><label><i class="fa-brands fa-instagram"></i></label></li>
+          <li><label><i class="fa-brands fa-twitter"></i></label></li>
+          <li><label><i class="fa-brands fa-linkedin"></i></label></li>
+           <li><label><i class="fa-brands fa-facebook-square"></i></label></li>
+          <li><label><i class="fa-brands fa-whatsapp"></i></label></li>
+         
+
+      </main>
+  </section>
+  <nav>
+    <div>
+      
+    </div>
+  </nav>
+</header>
+
+
+
+<script type="text/javascript">
+
+  const li = document.querySelectorAll('li');
+  function activeLink(){
+    li.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  li.forEach((item) =>
+  item.addEventListener('click',activeLink));
+
+</script>
+</body>
+</html>
